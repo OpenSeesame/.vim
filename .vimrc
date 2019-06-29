@@ -26,17 +26,12 @@
  set virtualedit=onemore
  " インデントはスマートインデント
  set smartindent
- " ビープ音を可視化
- set visualbell
  " 括弧入力時の対応する括弧を表示
  set showmatch
  " ステータスラインを常に表示
  set laststatus=2
  " コマンドラインの補完
  set wildmode=list:longest
- " 折り返し時に表示行単位での移動できるようにする
- nnoremap j gj
- nnoremap k gk
  " シンタックスハイライトの有効化
  syntax enable
 
@@ -80,4 +75,3 @@ autocmd BufNewFile,BufRead *.tex nnoremap <F5> :!platex %
 autocmd BufNewFile,BufRead *.tex nnoremap <F6> :!dvipdfmx
 
 colorscheme ron
-set background=dark
