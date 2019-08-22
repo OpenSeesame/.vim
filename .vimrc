@@ -37,8 +37,6 @@
 
 
 " Tab系
- " 不可視文字を可視化(タブが「▸-」と表示される)
- set list listchars=tab:\▸\-
  " Tab文字を半角スペースにする
  set expandtab
  " 行頭以外のTab文字の表示幅（スペースいくつ分）
@@ -59,8 +57,7 @@
  " 検索語をハイライト表示
  set hlsearch
  " ESC連打でハイライト解除
- nmap <Esc><Esc> :nohlsearch<CR><Esc
-
+ nmap <Esc><Esc> :nohlsearch<CR><ESC> 
 "python
 autocmd BufNewFile,BufRead *.py nnoremap <F5> :!python %
 
