@@ -1,6 +1,6 @@
 "setting
  "文字コードをUFT-8に設定
- set fileencodings=utf-8, cp932
+ set fileencodings=utf-8
  " バックアップファイルを作らない
  set nobackup
  " スワップファイルを作らない
