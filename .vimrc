@@ -1,7 +1,9 @@
 "setting
- "文字コードをUFT-8に設定
+ "文字コード自動判別
  set encoding=utf-8
- set fileencodings=utf-8
+ set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
+ "改行コード自動判別
+ set fileformats=unix,dos,mac
  " バックアップファイルを作らない
  set nobackup
  " スワップファイルを作らない
