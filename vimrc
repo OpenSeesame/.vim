@@ -23,6 +23,8 @@
  set cursorline
  " 現在の列を強調表示
  set cursorcolumn
+ " カーソルが何行目の何列目に置かれているかを表示
+ set ruler
  " マウスでカーソル移動可能にする
  set mouse=a
  " 行末の1文字先までカーソルを移動できるように
@@ -59,6 +61,9 @@
 
 " マッピング系
 inoremap jj <Esc>
+inoremap { {}<LEFT>
+inoremap [ []<LEFT>
+inoremap ( ()<LEFT>
 
 "python
 autocmd BufNewFile,BufRead *.py nnoremap <F5> :!python %
@@ -112,6 +117,7 @@ autocmd BufNewFile,BufRead *.tex nnoremap <F6> :!dvipdfmx
  endif
 
  let g:neosnippet#snippets_directory='~/.vim/rc/neosnippet-snippets/snippets/'
+ let g:indent_guides_enable_on_vim_startup = 1
 
  colorscheme molokai
  " シンタックスハイライトの有効化
