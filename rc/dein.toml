@@ -19,5 +19,9 @@ repo = 'Shougo/neosnippet-snippets'
 [[plugins]]
 repo = 'scrooloose/nerdtree'
 
+# colorscheme
+[[plugins]]
+repo = 'tomasr/molokai'
+
 [[plugins]]
 repo = 'romainl/Apprentice'

@@ -35,8 +35,6 @@
  set laststatus=2
  " コマンドラインの補完
  set wildmode=list:longest
- " シンタックスハイライトの有効化
- syntax enable
 
 " Tab系
  " Tab文字を半角スペースにする
@@ -75,9 +73,6 @@ autocmd BufNewFile,BufRead *.md nnoremap <F5> :!markdown % >
 autocmd BufNewFile,BufRead *.tex nnoremap <F5> :!platex %
 autocmd BufNewFile,BufRead *.tex nnoremap <F6> :!dvipdfmx
 
-colorscheme ron
-
-
  "dein.vimの設定
  " プラグインが実際にインストールされるディレクトリ
  let s:dein_dir = expand('~/.cache/dein')
@@ -100,7 +95,7 @@ colorscheme ron
      " 予め TOML ファイル（後述）を用意しておく
      let g:rc_dir    = expand('~/.vim/rc')
      let s:toml      = g:rc_dir . '/dein.toml'
-     let s:lazy_toml = g:rc_dir . '/dein_lazy.toml'
+     let s:lazy_toml = g:rc_dir . '/lazy.toml'
  
      " TOML を読み込み、キャッシュしておく
      call dein#load_toml(s:toml,      {'lazy': 0})
@@ -116,5 +111,8 @@ colorscheme ron
      call dein#install()
  endif
 
-let g:neosnippet#snippets_directory='~/.vim/rc/neosnippet-snippets/snippets/'
+ let g:neosnippet#snippets_directory='~/.vim/rc/neosnippet-snippets/snippets/'
 
+ colorscheme molokai
+ " シンタックスハイライトの有効化
+ syntax on
