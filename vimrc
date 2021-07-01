@@ -1,10 +1,5 @@
 "setting
 
- "文字コード自動判別
- set encoding=utf-8
- set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
- "改行コード自動判別
- set fileformats=unix,dos,mac
  " バックアップファイルを作らない
  set nobackup
  " スワップファイルを作らない
@@ -59,35 +54,18 @@
  " 検索語をハイライト表示
  set hlsearch
 
-" マッピング系
-inoremap jj <Esc>
-inoremap { {}<LEFT>
-inoremap [ []<LEFT>
-inoremap ( ()<LEFT>
-
-"python
-autocmd BufNewFile,BufRead *.py nnoremap <F5> :!python %
-
-"cpp
-autocmd BufNewFile,BufRead *.cpp nnoremap <F5> :!g++ -std=c++11 %
-
-"md
-autocmd BufNewFile,BufRead *.md nnoremap <F5> :!markdown % >
-
-""tex
-autocmd BufNewFile,BufRead *.tex nnoremap <F5> :!platex %
-autocmd BufNewFile,BufRead *.tex nnoremap <F6> :!dvipdfmx
-
- "dein.vimの設定
+ " ---------------
+ " dein.vimの設定
+ " ---------------
  " プラグインが実際にインストールされるディレクトリ
  let s:dein_dir = expand('~/.cache/dein')
  " dein.vim 本体
- let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
+ let s:dein_repo_dir = s:dein_dir . '/repos/github.com/shougo/dein.vim'
  
  " dein.vim がなければ github から落としてくる
  if &runtimepath !~# '/dein.vim'
      if !isdirectory(s:dein_repo_dir)
-         execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
+         execute '!git clone https://github.com/shougo/dein.vim' s:dein_repo_dir
      endif
      execute 'set runtimepath^=' . fnamemodify(s:dein_repo_dir, ':p')
  endif
@@ -118,11 +96,46 @@ autocmd BufNewFile,BufRead *.tex nnoremap <F6> :!dvipdfmx
 
  let g:neosnippet#snippets_directory='~/.vim/dein/neosnippet-snippets/snippets/'
  let g:indent_guides_enable_on_vim_startup = 1
+ " ---------------
+ " dein.vimの設定終了
+ " ---------------
 
+ " マッピング系
+ inoremap jj <esc>
+ nnoremap // :set hlsearch!<CR>
+
+ " neosnippet settings
+ imap <C-k> <Plug>(neosnippet_expand_or_jump)
+ smap <C-k> <Plug>(neosnippet_expand_or_jump)
+ xmap <C-k> <Plug>(neosnippet_expand_or_target)
+
+" SuperTab like snippets behavior.
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+"imap <expr><TAB>
+" \ pumvisible() ? "\<C-n>" :
+" \ neosnippet#expandable_or_jumpable() ?
+" \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+ "python
+ autocmd bufnewfile,bufread *.py nnoremap <f5> :!python %
+ 
+ "cpp
+ autocmd bufnewfile,bufread *.cpp nnoremap <f5> :!g++ -std=c++11 %
+ 
+ "md
+ autocmd bufnewfile,bufread *.md nnoremap <f5> :!markdown % >
+ 
+ "tex
+ autocmd bufnewfile,bufread *.tex nnoremap <f5> :!platex %
+ autocmd bufnewfile,bufread *.tex nnoremap <f6> :!dvipdfmx
+
+ "カラースキーマ
  colorscheme molokai
  " シンタックスハイライトの有効化
  syntax on
-" 256色
+ " 256色
  set t_Co=256
  " truecolor
  set termguicolors
