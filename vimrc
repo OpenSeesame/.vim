@@ -98,9 +98,9 @@ autocmd BufNewFile,BufRead *.tex nnoremap <F6> :!dvipdfmx
  
      " プラグインリストを収めた TOML ファイル
      " 予め TOML ファイル（後述）を用意しておく
-     let g:rc_dir    = expand('~/.vim/rc')
-     let s:toml      = g:rc_dir . '/dein.toml'
-     let s:lazy_toml = g:rc_dir . '/lazy.toml'
+     let g:dein_dir    = expand('~/.vim/dein')
+     let s:toml      = g:dein_dir . '/dein.toml'
+     let s:lazy_toml = g:dein_dir . '/lazy.toml'
  
      " TOML を読み込み、キャッシュしておく
      call dein#load_toml(s:toml,      {'lazy': 0})
@@ -116,9 +116,13 @@ autocmd BufNewFile,BufRead *.tex nnoremap <F6> :!dvipdfmx
      call dein#install()
  endif
 
- let g:neosnippet#snippets_directory='~/.vim/rc/neosnippet-snippets/snippets/'
+ let g:neosnippet#snippets_directory='~/.vim/dein/neosnippet-snippets/snippets/'
  let g:indent_guides_enable_on_vim_startup = 1
 
  colorscheme molokai
  " シンタックスハイライトの有効化
  syntax on
+" 256色
+ set t_Co=256
+ " truecolor
+ set termguicolors
