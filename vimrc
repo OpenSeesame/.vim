@@ -102,6 +102,10 @@
 
  " マッピング系
  inoremap jj <esc>
+ inoremap ｊｊ <esc>
+
+ nnoremap い i
+
  nnoremap // :set hlsearch!<CR>
 
  " neosnippet settings
