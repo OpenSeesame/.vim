@@ -1,4 +1,4 @@
-"SETTING
+"setting
 
  " バックアップファイルを作らない
  set nobackup
@@ -105,6 +105,29 @@
  inoremap ｊｊ <esc>
 
  nnoremap い i
+ nnoremap Ｉ <S-i>
+
+ nnoremap あ a
+ nnoremap Ａ <S-a>
+
+ nnoremap ｓ s
+ nnoremap Ｓ <S-s>
+
+ nnoremap お o
+ nnoremap Ｏ <S-o>
+
+ nnoremap ｈ h
+ nnoremap ｊ j
+ nnoremap ｋ k
+ nnoremap ｌ l
+
+ nnoremap ｗ w
+ nnoremap ｂ b
+
+ nnoremap ｄ d
+ nnoremap ｙ y
+
+ nnoremap う u
 
  nnoremap // :set hlsearch!<CR>
 
