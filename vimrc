@@ -1,4 +1,4 @@
-"setting
+"SETTING
 
  " バックアップファイルを作らない
  set nobackup
