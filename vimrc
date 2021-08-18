@@ -124,10 +124,26 @@
  nnoremap ｗ w
  nnoremap ｂ b
 
- nnoremap ｄ d
- nnoremap ｙ y
+ nnoremap ｄｄ dd
+ nnoremap ｙｙ yy
+ nnoremap ｐ p
+ nnoremap ｒ r
+
 
  nnoremap う u
+
+ nnoremap １ 1
+ nnoremap ２ 2
+ nnoremap ３ 3
+ nnoremap ４ 4
+ nnoremap ５ 5
+ nnoremap ６ 6
+ nnoremap ７ 7
+ nnoremap ８ 8
+ nnoremap ９ 9
+ nnoremap ０ 0
+
+ nnoremap ： :
 
  nnoremap // :set hlsearch!<CR>
 
