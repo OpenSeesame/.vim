@@ -1,5 +1,8 @@
 "setting
 
+ " 文字コードの自動判別
+ set encoding=utf-8
+ set fileencodings=utf-8,cp932
  " バックアップファイルを作らない
  set nobackup
  " スワップファイルを作らない
@@ -22,6 +25,8 @@
  set ruler
  " マウスでカーソル移動可能にする
  set mouse=a
+ " クリップボード
+ set clipboard=unnamed,autoselect
  " 行末の1文字先までカーソルを移動できるように
  set virtualedit=onemore
  " インデントはスマートインデント
