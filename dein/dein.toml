@@ -70,6 +70,17 @@ repo = 'scrooloose/nerdtree'
 [[plugins]]
 repo = 'bronson/vim-trailing-whitespace'
 
+[[plugins]]
+repo = 'xolox/vim-misc'
+
+[[plugins]]
+repo = 'xolox/vim-session'
+hook_add = '''
+let g:session_autosave = 'no'
+let g:session_autoload = 'no'
+nnoremap <Leader>ss :SaveSession
+'''
+
 #----------
 # syntax
 #----------
