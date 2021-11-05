@@ -37,6 +37,8 @@
  set laststatus=2
  " コマンドラインの補完
  set wildmode=list:longest
+ " 文字幅の設定
+ set ambiwidth=double
 
 " Tab系
  " Tab文字を半角スペースにする
